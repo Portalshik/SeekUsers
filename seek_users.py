@@ -30,10 +30,10 @@ for i in range(site):
     r = requests.get(sites[i])
     if r.status_code == 200:
         print(colored(f"{name_s}: Found! ({sites[i]})", "green"))
-    if save == 'y':
-        file = open(f'{name}.txt', 'a')
-        file.write(f"{sites[i]}\n")
-        file.close()
+        if save == 'y':
+            file = open(f'{name}.txt', 'a')
+            file.write(f"{sites[i]}\n")
+            file.close()
     else:
         print(colored(f'{name_s}: Not Found!', "red"))
         if save == "y":
