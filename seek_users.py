@@ -39,5 +39,5 @@ for i in range(site):
             file.close()
     else:
         print(colored(f'{name_s}: Not Found!', "red"))
-        if save == "y":
-print(f"Save in {name}.txt")
+if save == "y":
+    print(f"Save in {name}.txt")
