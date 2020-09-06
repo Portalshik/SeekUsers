@@ -10,32 +10,23 @@ print(colored(jpg, "blue"))
 name = input(colored('User name: ', "green"))
 save = input("Save it? [y/n]: ")
 
-inst = 'https://www.instagram.com/' + name
-vk = 'https://vk.com/' + name
-fb = 'https://www.facebook.com/' + name
-yout ='https://www.youtube.com/' + name
-gh = 'https://www.github.com/' + name
+inst = ['https://www.instagram.com/' + name, "Instagram"]
+vk = ['https://vk.com/' + name, "Vk"]
+fb = ['https://www.facebook.com/' + name, "Facebook"]
+yout = ['https://www.youtube.com/' + name, "YouTube"]
+gh = ['https://www.github.com/' + name, "GitHub"]
 
 sites = [inst, vk, fb, yout, gh]
 
 site = int(len(sites))
 for i in range(site):
-    if i == 0:
-        name_s = "Insragram"
-    elif i == 1:
-        name_s = "Vk"
-    elif i == 2:
-        name_s = "Facebook"
-    elif i == 3:
-        name_s = "YouTube"
-    elif i == 4:
-        name_s = "GitHub"
-    r = requests.get(sites[i])
+    name_s = sites[i][1]
+    r = requests.get(sites[i][0])
     if r.status_code == 200:
-        print(colored(f"{name_s}: Found! ({sites[i]})", "green"))
+        print(colored(f"{name_s}: Found! ({sites[i][0]})", "green"))
         if save == 'y':
             file = open(f'{name}.txt', 'a')
-            file.write(f"{sites[i]}\n")
+            file.write(f"{sites[i][0]}\n")
             file.close()
     else:
         print(colored(f'{name_s}: Not Found!', "red"))
