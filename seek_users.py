@@ -40,4 +40,4 @@ for i in range(site):
     else:
         print(colored(f'{name_s}: Not Found!', "red"))
         if save == "y":
-            print(f"Save in {name}.txt")
+print(f"Save in {name}.txt")
