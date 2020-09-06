@@ -15,8 +15,12 @@ vk = ['https://vk.com/' + name, "Vk"]
 fb = ['https://www.facebook.com/' + name, "Facebook"]
 yout = ['https://www.youtube.com/' + name, "YouTube"]
 gh = ['https://www.github.com/' + name, "GitHub"]
+patreon = ['https://www.patreon.com/' + name, "Patreon"]
+reddit = ['https://www.reddit.com/user/' + name, "Reddit"]
+twitch = [f'https://m.twitch.tv/{name}/profile', "Twitch"]
+spotify = ['https://open.spotify.com/user/' + name, "Spotify"]
 
-sites = [inst, vk, fb, yout, gh]
+sites = [inst, vk, fb, yout, gh, patreon, reddit, twitch, spotify]
 
 site = int(len(sites))
 for i in range(site):
