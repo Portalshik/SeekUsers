@@ -16,7 +16,7 @@ fb = 'https://www.facebook.com/' + name
 yout ='https://www.youtube.com/' + name
 gh = 'https://www.github.com/' + name
 
-sites = [inst, vk, fb, yout]
+sites = [inst, vk, fb, yout, gh]
 
 site = int(len(sites))
 for i in range(site):
