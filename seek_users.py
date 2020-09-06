@@ -14,6 +14,7 @@ inst = 'https://www.instagram.com/' + name
 vk = 'https://vk.com/' + name
 fb = 'https://www.facebook.com/' + name
 yout ='https://www.youtube.com/' + name
+gh = 'https://www.github.com/' + name
 
 sites = [inst, vk, fb, yout]
 
@@ -27,6 +28,8 @@ for i in range(site):
         name_s = "Facebook"
     elif i == 3:
         name_s = "YouTube"
+    elif i == 4:
+        name_s = "GitHub"
     r = requests.get(sites[i])
     if r.status_code == 200:
         print(colored(f"{name_s}: Found! ({sites[i]})", "green"))
