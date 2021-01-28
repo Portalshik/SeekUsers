@@ -27,7 +27,7 @@ for i in range(site):
     name_s = sites[i][1]
     r = requests.get(sites[i][0])
     if r.status_code == 200:
-        print(colored(f"{name_s}: Found! ({sites[i][0]})", "green"))
+        print(colored(f"{name_s}: Found! {sites[i][0]}", "green"))
         if save == 'y':
             file = open(f'{name}.txt', 'a')
             file.write(f"{sites[i][0]}\n")
